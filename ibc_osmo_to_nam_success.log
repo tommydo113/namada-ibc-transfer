@@ -1,0 +1,48 @@
+root@ubuntu:~/.hermes# osmosisd tx ibc-transfer transfer transfer channel-6620 tnam1qzcmw94c878a7phd2vqsjfltl69wd06zd5wn097t 1ibc/7BD2C66CE6E2D4B624AA14D0A0FFC63072E1000861EE21CEA860A5FB6263B1BD --from osmo1ecltxd39lpykwm4q8lu8tzh08npjxwf8fj9yd0 --node http://127.0.0.1:29657 --fees 500uosmo --chain-id osmo-test-5 --memo $MEMO
+Enter keyring passphrase (attempt 1/3):
+auth_info:
+  fee:
+    amount:
+    - amount: "500"
+      denom: uosmo
+    gas_limit: "200000"
+    granter: ""
+    payer: ""
+  signer_infos: []
+  tip: null
+body:
+  extension_options: []
+  memo: ""
+  messages:
+  - '@type': /ibc.applications.transfer.v1.MsgTransfer
+    memo: tpknam1qq426f87jxhjkfqsh3aw2v54nqu9fcfxax65u8mwwfvjkundlgp5k4494k4
+    receiver: tnam1qzcmw94c878a7phd2vqsjfltl69wd06zd5wn097t
+    sender: osmo1ecltxd39lpykwm4q8lu8tzh08npjxwf8fj9yd0
+    source_channel: channel-6620
+    source_port: transfer
+    timeout_height:
+      revision_height: "210972"
+      revision_number: "0"
+    timeout_timestamp: "1711243599422093869"
+    token:
+      amount: "1"
+      denom: ibc/7BD2C66CE6E2D4B624AA14D0A0FFC63072E1000861EE21CEA860A5FB6263B1BD
+  non_critical_extension_options: []
+  timeout_height: "0"
+signatures: []
+confirm transaction before signing and broadcasting [y/N]: y
+code: 0
+codespace: ""
+data: ""
+events: []
+gas_used: "0"
+gas_wanted: "0"
+height: "0"
+info: ""
+logs: []
+raw_log: '[]'
+timestamp: ""
+tx: null
+txhash: 8D8957CC3C79C5E365993F374700AA3F057E0B78BD9E8419E6ACA472BC9B504C
+
+https://testnet.osmosis.explorers.guru/transaction/8D8957CC3C79C5E365993F374700AA3F057E0B78BD9E8419E6ACA472BC9B504C

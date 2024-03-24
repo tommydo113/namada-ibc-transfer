@@ -1,0 +1,33 @@
+root@ubuntu:~/.hermes# namadaw list
+Known transparent keys:
+  Alias "key_relayer" (encrypted):
+    Public key hash: B1B716B83F8FDF06ED53010927EBFE8AE6BF426D
+    Public key: tpknam1qr457nta4xqfxd2v6emxd9antf5s9usuy8kvgd38vlrhe2yh05pq5fk8e0z
+Known transparent addresses:
+  "ethbridge": Internal EthBridge: tnam1quqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqfgdmms
+  "ethbridgepool": Internal EthBridgePool: tnam1pqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqu35hpf
+  "governance": Internal Governance: tnam1q5qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqrw33g6
+  "ibc": Internal IBC: tnam1qcqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqvtr7x4
+  "key_relayer": Implicit: tnam1qzcmw94c878a7phd2vqsjfltl69wd06zd5wn097t
+  "masp": Internal MASP: tnam1pcqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqzmefah
+  "naan": Established: tnam1qxvg64psvhwumv3mwrrjfcz0h3t3274hwggyzcee
+  "pos": Internal PoS: tnam1qgqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqc8j2fp
+  "publicgoodfundings": Internal PublicGoodFundings: tnam1pgqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqkhgajr
+root@ubuntu:~/.hermes# namadac ibc-transfer --source key_relayer --receiver osmo1ecltxd39lpykwm4q8lu8tzh08npjxwf8fj9yd0 --token NAAN --amount 2 --channel-id channel-1050 --memo $MEMO
+Enter your decryption password:
+Transaction added to mempool.
+Wrapper transaction hash: 9538CBCF82D5C3EB1BB90F35E62A308544C777C1DF87B0E144F4215A914CCAFC
+Inner transaction hash: 886D03EA12322366B0C021D170E52DE856AA86192DBAF86B85D38104A2CCC29F
+Wrapper transaction accepted at height 209970. Used 26 gas.
+Waiting for inner transaction result...
+Transaction was successfully applied at height 209971. Used 6193 gas.
+
+root@ubuntu:~/.hermes# osmosisd query bank balances osmo1ecltxd39lpykwm4q8lu8tzh08npjxwf8fj9yd0 --node http://127.0.0.1:29657
+balances:
+- amount: "2"
+  denom: ibc/7BD2C66CE6E2D4B624AA14D0A0FFC63072E1000861EE21CEA860A5FB6263B1BD
+- amount: "9958865"
+  denom: uosmo
+pagination:
+  next_key: null
+  total: "0"
