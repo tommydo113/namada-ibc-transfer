@@ -68,6 +68,8 @@ SUCCESS Channel {
     connection_delay: 0ns,
 }
 ```
+* IBC Create client: *
+- https://testnet.osmosis.explorers.guru/transaction/DF189FBB8139D8C97F4ED22EEB21C2CE7C1DB5FBC8E3C8956B4228F97342609D
 
 Transactions: 
 
